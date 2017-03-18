@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+#include "mpiOCL.h"
+#include "config.h"
+
+#define MESSAGE_EXIT 1
+#define MESSAGE_APPLY 2
+#define MESSAGE_SEND_DATA_A 3
+#define MESSAGE_SEND_DATA_B 4
+#define MESSAGE_RECEIVE_DATA 10
+
+void ArrayCopy(int* source_array,
+               const int source_begin,
+               int* dest_array,
+               const int dest_begin,
+               const int length);
+
+
+int* mix(int argc, char *argv[]);
